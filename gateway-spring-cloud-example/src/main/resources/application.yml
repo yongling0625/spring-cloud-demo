@@ -1,0 +1,20 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: spring-cloud-nacos-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 106.15.43.169:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: hello_route
+          #格式为：lb://应用注册服务名
+          uri: lb://service-provider
+          predicates:
+            - Method=GET

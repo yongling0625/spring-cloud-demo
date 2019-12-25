@@ -1,0 +1,5 @@
+rootProject.name = 'spring-cloud-demo'
+include 'nacos-spring-cloud-provider-example'
+include 'nacos-spring-cloud-consumer-example'
+include 'gateway-spring-cloud-example'
+
